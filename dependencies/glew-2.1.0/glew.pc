@@ -1,6 +1,6 @@
-prefix=C:/Program Files (x86)/imgui_app
+prefix=C:/Program Files (x86)/ImGuiApp_Demo
 exec_prefix=${prefix}
-libdir=C:/Program Files (x86)/imgui_app/lib
+libdir=C:/Program Files (x86)/ImGuiApp_Demo/lib
 includedir=${prefix}/include
 
 Name: glew
