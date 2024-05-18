@@ -1,9 +1,11 @@
+# Include GLM 
+add_subdirectory(glm-1.0.1-light/glm) 
 
-# Include Dear GLFGLEW into build. 
+# Include GLEW into build. 
 set(OpenGL_GL_PREFERENCE LEGACY) 
 add_subdirectory(glew-2.1.0/build/cmake) 
 
-# Include Dear GLFW into build.
+# Include GLFW into build.
 set(GLFW_BUILD_EXAMPLES OFF)
 add_subdirectory(glfw-3.4)
 
