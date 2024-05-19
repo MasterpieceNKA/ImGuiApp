@@ -22,3 +22,6 @@ set(IMGUI_IMPL_DX12 OFF)
 set(IMGUI_IMPL_VULKAN OFF)
 set(IMGUI_IMPL_OPENGL2 OFF)
 add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/imgui-1.90.6-docking)
+
+# Include spdlog into build.
+add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/spdlog-1.14.1)

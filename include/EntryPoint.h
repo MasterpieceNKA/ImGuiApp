@@ -1,6 +1,7 @@
 #pragma once
 
 #include "App.h"
+#include "Logger.h"
 
 extern ImGuiApp::App* ImGuiApp::CreateApp(int argc, char** argv);
 bool g_ApplicationRunning = true;
@@ -9,6 +10,8 @@ namespace ImGuiApp {
 
 	int Main(int argc, char** argv)
 	{
+		ImGuiApp::Logger::Init();
+
 		while (g_ApplicationRunning)
 		{
 			ImGuiApp::App* app = ImGuiApp::CreateApp(argc, argv);
@@ -21,7 +24,7 @@ namespace ImGuiApp {
 
 }
 
-#if defined(WL_DIST) && defined(WL_PLATFORM_WINDOWS)
+#if defined(IMGUIAPP_DIST) && defined(IMGUIAPP_PLATFORM_WINDOWS)
 
 #include <Windows.h>
 
@@ -37,4 +40,4 @@ int main(int argc, char** argv)
 	return ImGuiApp::Main(argc, argv);
 }
 
-#endif // WL_DIST && WL_PLATFORM_WINDOWS
+#endif // IMGUIAPP_DIST && IMGUIAPP_PLATFORM_WINDOWS
