@@ -1,7 +1,6 @@
-#ifndef __IMGUI_APP_LAYER__
-#define __IMGUI_APP_LAYER__
+#pragma once
 
-namespace imguiapp {
+namespace ImGuiApp {
     class Layer
     {
     public:
@@ -15,5 +14,3 @@ namespace imguiapp {
     };
 
 }
-
-#endif // __IMGUI_APP_LAYER__

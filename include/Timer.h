@@ -1,11 +1,10 @@
-#ifndef __IMGUI_APP_TIMER__
-#define __IMGUI_APP_TIMER__
+#pramga once
 
 #include <iostream>
 #include <string>
 #include <chrono>
 
-namespace imguiapp {
+namespace ImGuiApp {
 
 	class Timer
 	{
@@ -52,4 +51,3 @@ namespace imguiapp {
 
 
 }
-#endif //__IMGUI_APP_TIMER__

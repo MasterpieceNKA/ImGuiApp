@@ -1,11 +1,10 @@
-#ifndef __IMGUI_APP_RANDOM__
-#define __IMGUI_APP_RANDOM__ 
+#pragma once
 
 #include <random>
 
 #include <glm/glm.hpp>
 
-namespace imguiapp {
+namespace ImGuiApp {
 
 	class Random
 	{
@@ -49,6 +48,4 @@ namespace imguiapp {
 		static std::uniform_int_distribution<std::mt19937::result_type> s_Distribution;
 	};
 
-}
-
-#endif //  __IMGUI_APP_RANDOM__ 
+} 
