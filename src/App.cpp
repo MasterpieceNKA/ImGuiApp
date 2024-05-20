@@ -33,6 +33,8 @@
 #include "ImGui/Roboto-Regular.embed"
 
 #include <glm/glm.hpp>
+#include "Logger.h"
+#include <string>
 
 extern bool g_ApplicationRunning;
 
@@ -40,7 +42,7 @@ static ImGuiApp::App *s_Instance = nullptr;
 
 static void glfw_error_callback(int error, const char *description)
 {
-    fprintf(stderr, "GLFW Error %d: %s\n", error, description);
+    fprintf(stderr, "GLFW Error %d: %s\n", error, description); 
 }
 
 namespace ImGuiApp
@@ -281,14 +283,15 @@ namespace ImGuiApp
 
             // Rendering
             ImGui::Render();
+
+            for (auto& layer : m_LayerStack)
+                    layer->OnPostUIRender();
+            
             int display_w, display_h;
             glfwGetFramebufferSize(m_WindowHandle, &display_w, &display_h);
             glViewport(0, 0, display_w, display_h);
             glClearColor(clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w);
             glClear(GL_COLOR_BUFFER_BIT);
-
-            for (auto& layer : m_LayerStack)
-                    layer->OnPostUIRender();
 
             ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 

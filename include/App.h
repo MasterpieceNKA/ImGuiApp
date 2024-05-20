@@ -21,7 +21,7 @@ namespace ImGuiApp {
     {
         public:
             App(const AppSpecification& appSpecification = AppSpecification());
-            ~App();
+            virtual ~App();
 
             static App& Get();
 
