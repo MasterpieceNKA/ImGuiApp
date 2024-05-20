@@ -2,6 +2,9 @@
 
 #include <iostream>
 
+#include <GL/glew.h> 
+#include <GLFW/glfw3.h>
+
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
@@ -28,6 +31,8 @@
 
 // Emedded font
 #include "ImGui/Roboto-Regular.embed"
+
+#include <glm/glm.hpp>
 
 extern bool g_ApplicationRunning;
 
@@ -101,6 +106,16 @@ namespace ImGuiApp
         }
         glfwMakeContextCurrent(m_WindowHandle);
         glfwSwapInterval(1); // Enable vsync
+
+        glewExperimental = GL_TRUE;
+        if (glewInit() != GLEW_OK) {
+            std::cout << "glew initialisation failed!\n";
+            glfwDestroyWindow(m_WindowHandle);
+            glfwTerminate();
+            return;
+        }
+
+        glViewport(0, 0, m_Specification.Width, m_Specification.Height);
 
         // Setup Dear ImGui context
         IMGUI_CHECKVERSION();
@@ -245,7 +260,7 @@ namespace ImGuiApp
                 ImGuiIO& io = ImGui::GetIO();
                 if (io.ConfigFlags & ImGuiConfigFlags_DockingEnable)
                 {
-                    ImGuiID dockspace_id = ImGui::GetID("VulkanAppDockspace");
+                    ImGuiID dockspace_id = ImGui::GetID("ImGuiAppDockspace");
                     ImGui::DockSpace(dockspace_id, ImVec2(0.0f, 0.0f), dockspace_flags);
                 }
 
@@ -271,6 +286,10 @@ namespace ImGuiApp
             glViewport(0, 0, display_w, display_h);
             glClearColor(clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w);
             glClear(GL_COLOR_BUFFER_BIT);
+
+            for (auto& layer : m_LayerStack)
+                    layer->OnPostUIRender();
+
             ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
             // Update and Render additional Platform Windows
@@ -285,6 +304,11 @@ namespace ImGuiApp
             }
 
             glfwSwapBuffers(m_WindowHandle);
+
+            float time = GetTime();
+            m_FrameTime = time - m_LastFrameTime;
+            m_TimeStep = glm::min<float>(m_FrameTime, 0.0333f);
+            m_LastFrameTime = time;
         }
 
     }

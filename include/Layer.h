@@ -11,6 +11,7 @@ namespace ImGuiApp {
 
         virtual void OnUpdate(float ts) {}
         virtual void OnUIRender() {}
+        virtual void OnPostUIRender() {}
     };
 
 }
