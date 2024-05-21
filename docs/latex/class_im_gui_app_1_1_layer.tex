@@ -1,0 +1,59 @@
+\doxysection{Im\+Gui\+App\+::Layer Class Reference}
+\hypertarget{class_im_gui_app_1_1_layer}{}\label{class_im_gui_app_1_1_layer}\index{ImGuiApp::Layer@{ImGuiApp::Layer}}
+
+
+Template class for Im\+Gui frames. An Im\+Gui frame is marked by.  
+
+
+
+
+{\ttfamily \#include $<$Layer.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_im_gui_app_1_1_layer_a3474004cc3627354020bcdc84f27bc4a}\label{class_im_gui_app_1_1_layer_a3474004cc3627354020bcdc84f27bc4a} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Layer} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{class_im_gui_app_1_1_layer}{Layer} object. \end{DoxyCompactList}\item 
+\Hypertarget{class_im_gui_app_1_1_layer_a83daab955ac3eea2776f89a683eb5308}\label{class_im_gui_app_1_1_layer_a83daab955ac3eea2776f89a683eb5308} 
+virtual void {\bfseries On\+Attach} ()
+\begin{DoxyCompactList}\small\item\em Called after object has been added to m\+\_\+\+Layer\+Stack of the \doxylink{class_im_gui_app_1_1_app}{App} application instance. \end{DoxyCompactList}\item 
+\Hypertarget{class_im_gui_app_1_1_layer_af110bc02b78d068476af9b8d1c16ea24}\label{class_im_gui_app_1_1_layer_af110bc02b78d068476af9b8d1c16ea24} 
+virtual void {\bfseries On\+Detach} ()
+\begin{DoxyCompactList}\small\item\em Called when the \doxylink{class_im_gui_app_1_1_app}{App} application instance is shutting down. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_im_gui_app_1_1_layer_a35726c0ded8e8fbcb959586346145ab5}{On\+Update}} (float ts)
+\begin{DoxyCompactList}\small\item\em Called at the start of the render loop. \end{DoxyCompactList}\item 
+\Hypertarget{class_im_gui_app_1_1_layer_afae27ec803185e61d9995b535a6ff215}\label{class_im_gui_app_1_1_layer_afae27ec803185e61d9995b535a6ff215} 
+virtual void {\bfseries On\+UIRender} ()
+\begin{DoxyCompactList}\small\item\em Called in the render loop within the Im\+Gui\+::\+New\+Frame(); and Im\+Gui\+::\+End(); lines to render Im\+Gui frame items. \end{DoxyCompactList}\item 
+\Hypertarget{class_im_gui_app_1_1_layer_a4a6448c74ef23178abeccbd3c4b9d024}\label{class_im_gui_app_1_1_layer_a4a6448c74ef23178abeccbd3c4b9d024} 
+virtual void {\bfseries On\+Post\+UIRender} ()
+\begin{DoxyCompactList}\small\item\em Called after rendering loop Im\+Gui frame items i.\+e. after Im\+Gui\+::\+Render(); line. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Template class for Im\+Gui frames. An Im\+Gui frame is marked by. 
+
+Im\+Gui\+::\+Begin("{}\+Im\+Gui\+\_\+\+Frame\+\_\+\+Name"{}); ... ... Im\+Gui\+::\+End(); 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_im_gui_app_1_1_layer_a35726c0ded8e8fbcb959586346145ab5}\index{ImGuiApp::Layer@{ImGuiApp::Layer}!OnUpdate@{OnUpdate}}
+\index{OnUpdate@{OnUpdate}!ImGuiApp::Layer@{ImGuiApp::Layer}}
+\doxysubsubsection{\texorpdfstring{OnUpdate()}{OnUpdate()}}
+{\footnotesize\ttfamily \label{class_im_gui_app_1_1_layer_a35726c0ded8e8fbcb959586346145ab5} 
+virtual void Im\+Gui\+App\+::\+Layer\+::\+On\+Update (\begin{DoxyParamCaption}\item[{float}]{ts}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Called at the start of the render loop. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ts} & Time in seconds between the last and current frames \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_layer_8h}{Layer.\+h}}\end{DoxyCompactItemize}

@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.16)
 project(ImGuiApp LANGUAGES CXX)  
 if(NOT DEFINED CMAKE_CXX_STANDARD)
 	set(CMAKE_CXX_STANDARD 17)
-endif()
+endif() 
 
 set (CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set (CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
@@ -48,3 +48,9 @@ if(WIN32)
 endif()
 
 install(TARGETS ImGuiApp DESTINATION bin)
+
+# Copy figures into documentation folder
+file(GLOB IMG_FILES "${CMAKE_CURRENT_LIST_DIR}/figures/*")
+foreach(IMG_FILE ${IMG_FILES})
+	file(COPY ${IMG_FILE} DESTINATION ${CMAKE_CURRENT_LIST_DIR}/docs/html/figures)
+endforeach(IMG_FILE) 

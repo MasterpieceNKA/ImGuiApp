@@ -1,3 +1,13 @@
+/**
+ * @file App.cpp
+ * @author n.a (na@MasterpieceTechVideos.com)
+ * @brief Implementats functions for the App class responsible which maintain the lifecycle of the application
+ * @version 0.0.0
+ * @date 2024-05-20
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #include "App.h"
 
 #include <iostream>
@@ -36,10 +46,15 @@
 #include "Logger.h"
 #include <string>
 
+/// @brief Flag indicating the running state of the App application instance
 extern bool g_ApplicationRunning;
 
+/// @brief Static pointer to the App application instance
 static ImGuiApp::App *s_Instance = nullptr;
 
+/// @brief standard GLFW error call back function
+/// @param error error flag raised while initialising GLFW objects
+/// @param description error description
 static void glfw_error_callback(int error, const char *description)
 {
     fprintf(stderr, "GLFW Error %d: %s\n", error, description); 
@@ -47,6 +62,8 @@ static void glfw_error_callback(int error, const char *description)
 
 namespace ImGuiApp
 {
+    /// @brief App class constructor
+    /// @param appSpecification 
     App::App(const AppSpecification &appSpecification)
         : m_Specification(appSpecification)
     {
@@ -54,19 +71,31 @@ namespace ImGuiApp
 
         Init();
     }
-
+    /**
+     * @brief Destroy the App:: App object
+     * 
+     */
     App::~App()
     {
         Shutdown();
 
         s_Instance = nullptr;
     }
-
+    /**
+     * @brief Returns reference to the current App object instance stored by s_Instance
+     * 
+     * @return App& 
+     */
     App &App::Get()
     {
         return *s_Instance;
     }
 
+    /**
+     * @brief Initialises ImGui components. 
+     * Sourced from dependencies\imgui-1.90.6-docking\examples\example_glfw_opengl3\main.cpp
+     * 
+     */
     void App::Init()
     {
         glfwSetErrorCallback(glfw_error_callback);
@@ -172,6 +201,11 @@ namespace ImGuiApp
 
     }
 
+    /**
+     * @brief Performs cleanup while shutting down eg destroying windows and freeing up the OpenGL context
+     * Sourced from dependencies\imgui-1.90.6-docking\examples\example_glfw_opengl3\main.cpp
+     * 
+     */
     void App::Shutdown()
     {
         for (auto& layer : m_LayerStack)
@@ -189,17 +223,30 @@ namespace ImGuiApp
 
 		g_ApplicationRunning = false;
     }
-
+    /**
+     * @brief Sets m_Running to true to enable shutting down the app.
+     * 
+     */
     void App::Close()
     {
         m_Running = false;
     }
-
+    /**
+     * @brief Returns the time elapsed since the program started running (since GLFW was initialized)
+     * 
+     * @return float time in seconds
+     */
     float App::GetTime()
     {
         return (float)glfwGetTime();
     } 
 
+    /**
+     * @brief Maintains the applications render "while" loop
+     * Sourced from dependencies\imgui-1.90.6-docking\examples\example_glfw_opengl3\main.cpp
+     * with additions to enable maintaining of ImGui frames contained in m_LayerStack
+     * 
+     */
     void App::Run()
     {
         m_Running = true;

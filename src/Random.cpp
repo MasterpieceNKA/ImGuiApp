@@ -1,3 +1,13 @@
+/**
+ * @file Random.cpp
+ * @author n.a (na@MasterpieceTechVideos.com)
+ * @brief Implementation for some definitions in Random.h
+ * @version 0.0.0
+ * @date 2024-05-20
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #include "Random.h" 
 
 namespace ImGuiApp {

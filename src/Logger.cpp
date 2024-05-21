@@ -1,3 +1,13 @@
+/**
+ * @file Logger.cpp
+ * @author n.a (na@MasterpieceTechVideos.com)
+ * @brief Implementation of the class for creating a logger class using spdlog
+ * @version 0.0.0
+ * @date 2024-05-20
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #include <Logger.h>
 #include <spdlog/sinks/stdout_color_sinks.h>
 #include <spdlog/sinks/basic_file_sink.h>

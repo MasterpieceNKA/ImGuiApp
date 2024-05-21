@@ -1,3 +1,13 @@
+/**
+ * @file Random.h
+ * @author n.a (na@MasterpieceTechVideos.com)
+ * @brief Defines the classes for generating random values
+ * @version 0.0.0
+ * @date 2024-05-20
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #pragma once
 
 #include <random>
