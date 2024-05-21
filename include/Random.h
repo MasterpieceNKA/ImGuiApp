@@ -15,7 +15,10 @@
 #include <glm/glm.hpp>
 
 namespace ImGuiApp {
-
+	/**
+	 * @brief Defines the classes for generating random values
+	 * 
+	 */
 	class Random
 	{
 	public:
