@@ -31,3 +31,6 @@ add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/spdlog)
 # Include pbPlots into build. 
 add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/pbPlots)
 
+# Include glm into build. 
+add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/glm)
+

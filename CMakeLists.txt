@@ -25,6 +25,7 @@ file(GLOB ImGuiApp_SOURCE "${CMAKE_CURRENT_LIST_DIR}/src/*.cpp")
 add_library(ImGuiApp STATIC ${ImGuiApp_SOURCE})
 
 target_link_libraries(ImGuiApp PUBLIC spdlog glm glew glfw imgui imgui-glfw imgui-opengl3 pbPlots)
+target_link_libraries(ImGuiApp PRIVATE glm::glm-header-only)
 
 target_include_directories(
     ImGuiApp PUBLIC 

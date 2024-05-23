@@ -7,3 +7,6 @@
 [submodule "dependencies/pbPlots/pbPlots"]
 	path = dependencies/pbPlots/pbPlots
 	url = https://github.com/InductiveComputerScience/pbPlots.git
+[submodule "dependencies/glm"]
+	path = dependencies/glm
+	url = https://github.com/g-truc/glm.git
