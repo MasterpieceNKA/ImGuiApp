@@ -1,6 +1,12 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(ImGuiApp LANGUAGES CXX)  
+if(NOT DEFINED CMAKE_TOOLCHAIN_FILE)
+    set(CMAKE_TOOLCHAIN_FILE ${CMAKE_CURRENT_LIST_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake)
+    MESSAGE(STATUS "Setting CMAKE_TOOLCHAIN_FILE in root : ${CMAKE_TOOLCHAIN_FILE}")
+endif() 
+
+project(ImGuiApp LANGUAGES CXX)
+  
 if(NOT DEFINED CMAKE_CXX_STANDARD)
 	set(CMAKE_CXX_STANDARD 17)
 endif() 
@@ -18,12 +24,13 @@ file(GLOB ImGuiApp_SOURCE "${CMAKE_CURRENT_LIST_DIR}/src/*.cpp")
 
 add_library(ImGuiApp STATIC ${ImGuiApp_SOURCE})
 
-target_link_libraries(ImGuiApp PUBLIC spdlog glm glew glfw imgui imgui-glfw imgui-opengl3)
+target_link_libraries(ImGuiApp PUBLIC spdlog glm glew glfw imgui imgui-glfw imgui-opengl3 pbPlots)
 
 target_include_directories(
     ImGuiApp PUBLIC 
     ${CMAKE_CURRENT_LIST_DIR}/dependencies/glew-2.1.0/include
     ${CMAKE_CURRENT_LIST_DIR}/dependencies/glm-1.0.1-light 
+    ${CMAKE_CURRENT_LIST_DIR}/dependencies/pbPlots/pbPlots/Cpp
     ${CMAKE_CURRENT_LIST_DIR}/include
 ) 
 

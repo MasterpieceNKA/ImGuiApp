@@ -1,3 +1,9 @@
 [submodule "dependencies/spdlog/spdlog"]
 	path = dependencies/spdlog/spdlog
 	url = https://github.com/gabime/spdlog.git
+[submodule "vcpkg"]
+	path = vcpkg
+	url = https://github.com/microsoft/vcpkg.git
+[submodule "dependencies/pbPlots/pbPlots"]
+	path = dependencies/pbPlots/pbPlots
+	url = https://github.com/InductiveComputerScience/pbPlots.git

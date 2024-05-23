@@ -44,7 +44,7 @@
 
 #include <glm/glm.hpp>
 #include "Logger.h"
-#include <string>
+#include <string> 
 
 /// @brief Flag indicating the running state of the App application instance
 extern bool g_ApplicationRunning;
