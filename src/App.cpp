@@ -137,6 +137,7 @@ namespace ImGuiApp
         }
         glfwMakeContextCurrent(m_WindowHandle);
         glfwSwapInterval(1); // Enable vsync
+        glEnable(GL_DEPTH_TEST);
 
         glewExperimental = GL_TRUE;
         if (glewInit() != GLEW_OK) {
