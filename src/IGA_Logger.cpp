@@ -8,16 +8,16 @@
  * @copyright Copyright (c) 2024
  * 
  */
-#include <Logger.h>
+#include <IGA_Logger.h>
 #include <spdlog/sinks/stdout_color_sinks.h>
 #include <spdlog/sinks/basic_file_sink.h>
 
 namespace ImGuiApp
 {
-    std::shared_ptr<spdlog::logger> Logger::m_CoreLogger;
-    std::shared_ptr<spdlog::logger> Logger::m_ClientLogger;
+    std::shared_ptr<spdlog::logger> IGA_Logger::m_CoreLogger;
+    std::shared_ptr<spdlog::logger> IGA_Logger::m_ClientLogger;
 
-    void Logger::Init()
+    void IGA_Logger::Init()
     {
         m_CoreLogger = spdlog::stdout_color_mt("ImGui App");
         m_CoreLogger->set_pattern("%^[%T] [%n] %v%$");

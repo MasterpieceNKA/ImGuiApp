@@ -43,7 +43,7 @@
 #include "ImGui/Roboto-Regular.embed"
 
 #include <glm/glm.hpp>
-#include "Logger.h"
+#include "IGA_Logger.h"
 #include <string> 
 
 /// @brief Flag indicating the running state of the App application instance

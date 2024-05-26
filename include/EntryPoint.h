@@ -11,7 +11,7 @@
 #pragma once
 
 #include "App.h"
-#include "Logger.h"
+#include "IGA_Logger.h"
 
 /// @brief Function defenition for creating the App instance
 /// @param argc main function argument count
@@ -31,7 +31,7 @@ namespace ImGuiApp {
 	 */
 	int Main(int argc, char** argv)
 	{
-		ImGuiApp::Logger::Init();
+		ImGuiApp::IGA_Logger::Init();
 
 		while (g_ApplicationRunning)
 		{

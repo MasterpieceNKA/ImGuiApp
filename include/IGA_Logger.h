@@ -18,7 +18,7 @@ namespace ImGuiApp
      * @brief Class for performing logging function
      * 
      */
-    class Logger
+    class IGA_Logger
     {
     public:
         /// @brief Initialises the class logging variables
@@ -37,18 +37,18 @@ namespace ImGuiApp
     };
 }
 /// @brief Info level logger for the core ImGuiApp app e.g. IGA_CORE_INFO("Core info message")
-#define IGA_CORE_INFO(...) ::ImGuiApp::Logger::GetCoreLogger()->info(__VA_ARGS__)
+#define IGA_CORE_INFO(...) ::ImGuiApp::IGA_Logger::GetCoreLogger()->info(__VA_ARGS__)
 /// @brief Warning level logger for the core ImGuiApp app e.g. IGA_CORE_WARN("Core warning message")
-#define IGA_CORE_WARN(...) ::ImGuiApp::Logger::GetCoreLogger()->warn(__VA_ARGS__)
+#define IGA_CORE_WARN(...) ::ImGuiApp::IGA_Logger::GetCoreLogger()->warn(__VA_ARGS__)
 /// @brief Error level logger for the core ImGuiApp app e.g. IGA_CORE_WARN("Core error message")
-#define IGA_CORE_ERROR(...) ::ImGuiApp::Logger::GetCoreLogger()->error(__VA_ARGS__)
+#define IGA_CORE_ERROR(...) ::ImGuiApp::IGA_Logger::GetCoreLogger()->error(__VA_ARGS__)
 
 /// @brief Info level logger for the client ImGuiApp app e.g. IGA_INFO("Client info message")
-#define IGA_INFO(...) ::ImGuiApp::Logger::GetClientLogger()->info(__VA_ARGS__)
+#define IGA_INFO(...) ::ImGuiApp::IGA_Logger::GetClientLogger()->info(__VA_ARGS__)
 /// @brief Warning level logger for the client ImGuiApp app e.g. IGA_WARN("Client warning message")
-#define IGA_WARN(...) ::ImGuiApp::Logger::GetClientLogger()->warn(__VA_ARGS__)
+#define IGA_WARN(...) ::ImGuiApp::IGA_Logger::GetClientLogger()->warn(__VA_ARGS__)
 /// @brief Error level logger for the client ImGuiApp app e.g. IGA_ERROR("Client error message")
-#define IGA_ERROR(...) ::ImGuiApp::Logger::GetClientLogger()->error(__VA_ARGS__)
+#define IGA_ERROR(...) ::ImGuiApp::IGA_Logger::GetClientLogger()->error(__VA_ARGS__)
 
 
 #define IGA_STRINGIFY_MACRO(macro) #macro
