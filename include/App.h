@@ -110,24 +110,7 @@ namespace ImGuiApp {
              * 
              * @return GLFWwindow* Pointer to the main Window of the application
              */
-            GLFWwindow* GetWindowHandle() const { return m_WindowHandle; }
-            /**
-             * @brief Callback for when mouse button events such as button presses and releases happen
-             * 
-             * @param window Pointer to the main window of the application that recieved the event
-             * @param button The mouse button that was pressed or released.
-             * @param action One of GLFW_PRESS or GLFW_RELEASE. Future releases may add more actions. 
-             * @param mods Bit field describing which modifier keys were held down. (GLFW_MOD_SHIFT, GLFW_MOD_CONTROL, GLFW_MOD_ALT, ...)
-             */
-            virtual void MouseButtonCallBack(const GLFWwindow* window, int button, int action, int mods);
-            /**
-             * @brief Callback for when mouse scroll events occure. 
-             * 
-             * @param window The window that received the event. 
-             * @param xoffset The scroll offset along the x-axis.
-             * @param yoffset The scroll offset along the y-axis.
-             */
-            virtual void ScrollCallBack(GLFWwindow* window, double xoffset, double yoffset);
+            GLFWwindow* GetWindowHandle() const { return m_WindowHandle; } 
 
         private:
             /**

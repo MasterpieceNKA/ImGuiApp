@@ -199,7 +199,7 @@ namespace ImGuiApp
         fontConfig.FontDataOwnedByAtlas = false;
         ImFont* robotoFont = io.Fonts->AddFontFromMemoryTTF((void*)g_RobotoRegular, sizeof(g_RobotoRegular), 20.0f, &fontConfig);
         io.FontDefault = robotoFont; 
-        
+
     }
 
     /**
@@ -240,19 +240,7 @@ namespace ImGuiApp
     float App::GetTime()
     {
         return (float)glfwGetTime();
-    }
-
-    void App::MouseButtonCallBack(const GLFWwindow *window, int button, int action, int mods)
-    {
-        for (auto& layer : m_LayerStack)
-            layer->OnMouseButtonEvent(window, button, action, mods);
-    }
-    
-    void App::ScrollCallBack(GLFWwindow *window, double xoffset, double yoffset)
-    {
-        for (auto& layer : m_LayerStack)
-            layer->OnScrollEvent(window, xoffset, yoffset);
-    }
+    } 
 
     /**
      * @brief Maintains the applications render "while" loop
