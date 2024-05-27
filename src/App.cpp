@@ -60,6 +60,18 @@ static void glfw_error_callback(int error, const char *description)
     fprintf(stderr, "GLFW Error %d: %s\n", error, description); 
 }
 
+
+void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
+{
+    ImGuiApp::App& app = ImGuiApp::App::Get();
+    app.MouseButtonCallBack(window, button, action, mods);
+}
+void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
+{
+    ImGuiApp::App& app = ImGuiApp::App::Get();
+    app.ScrollCallBack(window, xoffset, yoffset);
+}
+
 namespace ImGuiApp
 {
     /// @brief App class constructor
@@ -200,6 +212,8 @@ namespace ImGuiApp
         ImFont* robotoFont = io.Fonts->AddFontFromMemoryTTF((void*)g_RobotoRegular, sizeof(g_RobotoRegular), 20.0f, &fontConfig);
         io.FontDefault = robotoFont;
 
+        glfwSetMouseButtonCallback(m_WindowHandle, mouse_button_callback);
+        glfwSetScrollCallback(m_WindowHandle, scroll_callback); 
     }
 
     /**
@@ -240,7 +254,19 @@ namespace ImGuiApp
     float App::GetTime()
     {
         return (float)glfwGetTime();
-    } 
+    }
+
+    void App::MouseButtonCallBack(const GLFWwindow *window, int button, int action, int mods)
+    {
+        for (auto& layer : m_LayerStack)
+            layer->OnMouseButtonEvent(window, button, action, mods);
+    }
+    
+    void App::ScrollCallBack(GLFWwindow *window, double xoffset, double yoffset)
+    {
+        for (auto& layer : m_LayerStack)
+            layer->OnScrollEvent(window, xoffset, yoffset);
+    }
 
     /**
      * @brief Maintains the applications render "while" loop
