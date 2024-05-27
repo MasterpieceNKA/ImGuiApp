@@ -58,19 +58,7 @@ static ImGuiApp::App *s_Instance = nullptr;
 static void glfw_error_callback(int error, const char *description)
 {
     fprintf(stderr, "GLFW Error %d: %s\n", error, description); 
-}
-
-
-void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
-{
-    ImGuiApp::App& app = ImGuiApp::App::Get();
-    app.MouseButtonCallBack(window, button, action, mods);
-}
-void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
-{
-    ImGuiApp::App& app = ImGuiApp::App::Get();
-    app.ScrollCallBack(window, xoffset, yoffset);
-}
+} 
 
 namespace ImGuiApp
 {
@@ -210,10 +198,8 @@ namespace ImGuiApp
         ImFontConfig fontConfig;
         fontConfig.FontDataOwnedByAtlas = false;
         ImFont* robotoFont = io.Fonts->AddFontFromMemoryTTF((void*)g_RobotoRegular, sizeof(g_RobotoRegular), 20.0f, &fontConfig);
-        io.FontDefault = robotoFont;
-
-        glfwSetMouseButtonCallback(m_WindowHandle, mouse_button_callback);
-        glfwSetScrollCallback(m_WindowHandle, scroll_callback); 
+        io.FontDefault = robotoFont; 
+        
     }
 
     /**
