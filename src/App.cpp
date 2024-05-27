@@ -322,7 +322,6 @@ namespace ImGuiApp
                         ImGui::EndMenuBar();
                     }
                 }
-
                 for (auto& layer : m_LayerStack)
                     layer->OnUIRender();
 
@@ -339,7 +338,8 @@ namespace ImGuiApp
             glfwGetFramebufferSize(m_WindowHandle, &display_w, &display_h);
             glViewport(0, 0, display_w, display_h);
             glClearColor(clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w);
-            glClear(GL_COLOR_BUFFER_BIT);
+            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
 
             ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
