@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['random_0',['Random',['../class_im_gui_app_1_1_random.html',1,'ImGuiApp']]]
+  ['layer_0',['Layer',['../class_im_gui_app_1_1_layer.html',1,'ImGuiApp']]]
 ];

@@ -1,6 +1,6 @@
 /**
  * @file Logger.h
- * @author n.a (na@MasterpieceTechVideos.com)
+ * @author n.a (na@mail.com)
  * @brief Defines the class for creating a logger class using spdlog
  * @version 0.0.0
  * @date 2024-05-20

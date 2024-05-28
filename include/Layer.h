@@ -1,6 +1,6 @@
 /**
  * @file Layer.h
- * @author n.a (n.a@MasterpieceTechVideos.com)
+ * @author n.a (n.a@mail.com)
  * @brief Defines the template class for ImGui frames
  * @version 0.0.0
  * @date 2024-05-20

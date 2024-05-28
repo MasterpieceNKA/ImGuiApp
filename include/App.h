@@ -1,6 +1,6 @@
 /**
  * @file App.h
- * @author n.a (n.a@MasterpieceTechVideos.com)
+ * @author n.a (n.a@mail.com)
  * @brief This file defines the App class responsible for maintaining the lifecycle of the application
  * @version 0.0.0
  * @date 2024-05-20

@@ -1,6 +1,6 @@
 /**
  * @file EntryPoint.h
- * @author n.a (n.a@MasterpieceTechVideos.com)
+ * @author n.a (n.a@mail.com)
  * @brief Defines the Entry point for the application responsible which is controls how the main function is run
  * @version 0.0.0
  * @date 2024-05-20

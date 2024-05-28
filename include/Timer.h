@@ -1,6 +1,6 @@
 /**
  * @file Timer.h
- * @author n.a (na@MasterpieceTechVideos.com)
+ * @author n.a (na@mail.com)
  * @brief Defines the classes for calculating the time for frame rate evaluation
  * @version 0.0.0
  * @date 2024-05-20

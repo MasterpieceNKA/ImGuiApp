@@ -1,6 +1,6 @@
 /**
  * @file Random.h
- * @author n.a (na@MasterpieceTechVideos.com)
+ * @author n.a (na@mail.com)
  * @brief Defines the classes for generating random values
  * @version 0.0.0
  * @date 2024-05-20
