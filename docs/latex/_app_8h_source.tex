@@ -48,23 +48,26 @@
 \DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_gui_app_1_1_app_a31bc7517752daf52aa37fd031dbc92b8}{Close}}();}
 \DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_im_gui_app_1_1_app_a5837b68d78df8b601205324d6fd5144d}{GetTime}}();}
 \DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ GLFWwindow*\ \mbox{\hyperlink{class_im_gui_app_1_1_app_abc34fed94848fa255e7db72305995ce7}{GetWindowHandle}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_WindowHandle;\ \}\ }
-\DoxyCodeLine{00114\ }
-\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Init();}
-\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Shutdown();}
-\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_im_gui_app_1_1_app_specification}{AppSpecification}}\ m\_Specification;}
-\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ GLFWwindow*\ m\_WindowHandle\ =\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_Running\ =\ \textcolor{keyword}{false};\ }
-\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ m\_TimeStep\ =\ 0.0f;}
-\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ m\_FrameTime\ =\ 0.0f;}
-\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ m\_LastFrameTime\ =\ 0.0f;}
-\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Collection\ of\ Layer\ ImGui\ frames}}
-\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<Layer>>\ m\_LayerStack;}
-\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ std::function<void()>\ m\_MenubarCallback;}
-\DoxyCodeLine{00140\ \ \ \ \ \};}
-\DoxyCodeLine{00141\ \ \ \ \ }
-\DoxyCodeLine{00149\ \ \ \ \ \mbox{\hyperlink{class_im_gui_app_1_1_app}{App}}*\ \mbox{\hyperlink{_app_8h_a2961b7a4fc9c1fe631bdf5a074147c3e}{CreateApp}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}**\ argv);}
-\DoxyCodeLine{00150\ \}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<Layer>>*\ \mbox{\hyperlink{class_im_gui_app_1_1_app_a0df3a21e82b461e57ba53966889a5924}{GetLayerStack}}()\ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \&m\_LayerStack;\ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Init();}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Shutdown();}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_im_gui_app_1_1_app_specification}{AppSpecification}}\ m\_Specification;}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ GLFWwindow*\ m\_WindowHandle\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_Running\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ m\_TimeStep\ =\ 0.0f;}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ m\_FrameTime\ =\ 0.0f;}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ m\_LastFrameTime\ =\ 0.0f;}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Collection\ of\ Layer\ ImGui\ frames}}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<Layer>>\ m\_LayerStack;}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ std::function<void()>\ m\_MenubarCallback;}
+\DoxyCodeLine{00148\ \ \ \ \ \};}
+\DoxyCodeLine{00149\ \ \ \ \ }
+\DoxyCodeLine{00157\ \ \ \ \ \mbox{\hyperlink{class_im_gui_app_1_1_app}{App}}*\ \mbox{\hyperlink{_app_8h_a2961b7a4fc9c1fe631bdf5a074147c3e}{CreateApp}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}**\ argv);}
+\DoxyCodeLine{00158\ \}}
 
 \end{DoxyCode}

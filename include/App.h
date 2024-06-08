@@ -111,6 +111,14 @@ namespace ImGuiApp {
              * @return GLFWwindow* Pointer to the main Window of the application
              */
             GLFWwindow* GetWindowHandle() const { return m_WindowHandle; } 
+            /**
+             * @brief Get pointer to m_LayerStack (the Layer stack object)
+             * 
+             * @return std::vector<std::shared_ptr<Layer>>* 
+             */
+            std::vector<std::shared_ptr<Layer>>* GetLayerStack() {
+                return &m_LayerStack; 
+            }
 
         private:
             /**
@@ -134,11 +142,9 @@ namespace ImGuiApp {
             float m_TimeStep = 0.0f;
             float m_FrameTime = 0.0f;
             float m_LastFrameTime = 0.0f;
-            // Collection of menu callback functions
-            std::function<void()> m_MenubarCallback;
-        public:
             // Collection of Layer ImGui frames
             std::vector<std::shared_ptr<Layer>> m_LayerStack;
+            std::function<void()> m_MenubarCallback;
     };
     
     /**
