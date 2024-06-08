@@ -134,9 +134,11 @@ namespace ImGuiApp {
             float m_TimeStep = 0.0f;
             float m_FrameTime = 0.0f;
             float m_LastFrameTime = 0.0f;
+            // Collection of menu callback functions
+            std::function<void()> m_MenubarCallback;
+        public:
             // Collection of Layer ImGui frames
             std::vector<std::shared_ptr<Layer>> m_LayerStack;
-            std::function<void()> m_MenubarCallback;
     };
     
     /**
