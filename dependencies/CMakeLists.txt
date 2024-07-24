@@ -12,6 +12,12 @@ set(GLFW_BUILD_EXAMPLES OFF)
 add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/glfw-3.4)
 
 # Include Dear ImGui into build.
+find_package(Freetype)
+if (FREETYPE_FOUND)
+    set(IMGUI_ENABLE_FREETYPE ON) 
+else()
+    set(IMGUI_ENABLE_FREETYPE OFF)
+endif()
 set(IMGUI_EXAMPLES OFF)
 set(IMGUI_IMPL_SDL OFF)
 set(IMGUI_IMPL_WIN32 OFF)
