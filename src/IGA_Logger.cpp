@@ -20,16 +20,16 @@ namespace ImGuiApp
     void IGA_Logger::Init()
     {
         m_CoreLogger = spdlog::stdout_color_mt("ImGui App");
-        m_CoreLogger->set_pattern("%^[%T] [%n] %v%$");
+        m_CoreLogger->set_pattern("%^[%Y-%m-%d %H:%M:%S.%e] [%n] %v%$");
         m_CoreLogger->set_level(spdlog::level::trace);
 
         m_ClientLogger = spdlog::stdout_color_mt("Client App");
-        m_ClientLogger->set_pattern("%^[%T] [%n] %v%$");
+        m_ClientLogger->set_pattern("%^[%Y-%m-%d %H:%M:%S.%e] [%n] %v%$");
         m_ClientLogger->set_level(spdlog::level::trace);
 
         
         auto fileLogger = spdlog::basic_logger_mt("FileLogger", "logs.txt");
-        fileLogger->set_pattern("[%T] [%n] %v");
+        fileLogger->set_pattern("[%Y-%m-%d %H:%M:%S.%e] [%n] %v");
         fileLogger->set_level(spdlog::level::trace);
 
         m_CoreLogger->sinks().push_back(fileLogger->sinks().front());
