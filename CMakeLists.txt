@@ -14,7 +14,11 @@ add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/dependencies)
 
 set(ImGuiApp_INCLUDE_DIR ${CMAKE_CURRENT_LIST_DIR}/include)
 
-file(GLOB ImGuiApp_SOURCE "${CMAKE_CURRENT_LIST_DIR}/src/*.cpp")
+file(
+    GLOB ImGuiApp_SOURCE 
+    "${CMAKE_CURRENT_LIST_DIR}/src/*.cpp"  
+    "${CMAKE_CURRENT_LIST_DIR}/dependencies/ImGui-FileBrowser/*.cpp"
+)
 
 
 add_library(ImGuiApp STATIC ${ImGuiApp_SOURCE})
@@ -25,6 +29,7 @@ target_include_directories(
     ImGuiApp PUBLIC 
     ${CMAKE_CURRENT_LIST_DIR}/dependencies/glew-2.1.0/include
     ${CMAKE_CURRENT_LIST_DIR}/dependencies/glm-1.0.1-light 
+    ${CMAKE_CURRENT_LIST_DIR}/dependencies/ImGui-FileBrowser 
     ${CMAKE_CURRENT_LIST_DIR}/include
 ) 
 

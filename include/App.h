@@ -16,8 +16,10 @@
 #include <vector>
 #include <memory>
 #include <functional>
+#include <set>
 
 #include "imgui.h"
+#include "imgui_filebrowser.h"
 
 struct GLFWwindow;
 
