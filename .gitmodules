@@ -1,6 +1,3 @@
 [submodule "dependencies/spdlog/spdlog"]
 	path = dependencies/spdlog/spdlog
 	url = https://github.com/gabime/spdlog.git
-[submodule "dependencies/ImGui-FileBrowser"]
-	path = dependencies/ImGui-FileBrowser
-	url = https://github.com/haraldwer/ImGui-FileBrowser.git
