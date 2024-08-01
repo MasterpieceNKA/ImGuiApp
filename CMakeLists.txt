@@ -24,7 +24,7 @@ target_link_libraries(ImGuiApp PUBLIC spdlog glm glew glfw imgui imgui-glfw imgu
 target_include_directories(
     ImGuiApp PUBLIC 
     ${CMAKE_CURRENT_LIST_DIR}/dependencies/glew-2.1.0/include
-    ${CMAKE_CURRENT_LIST_DIR}/dependencies/glm-1.0.1-light #${CMAKE_CURRENT_LIST_DIR}/dependencies/ImGui-FileBrowser 
+    ${CMAKE_CURRENT_LIST_DIR}/dependencies/glm-1.0.1-light 
     ${CMAKE_CURRENT_LIST_DIR}/include
 ) 
 
