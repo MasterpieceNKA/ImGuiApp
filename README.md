@@ -44,7 +44,7 @@ target_link_libraries(<your executable's name> PUBLIC ImGuiApp)
 [ImGuiApp_Demo](https://github.com/MasterpieceNKA/ImGuiApp_Demo.git) is a sample project setup that uses ImGuiApp.
 
 
-![Image of ImGuiApp Demo](figures/fig_1.png)
+<img src="figures/fig_1.png" alt="ImGuiApp Demo Application" style="width:900px;"/>
 
 [ImGuiApp Demo Application](https://github.com/MasterpieceNKA/ImGuiApp_Demo)
 
@@ -53,18 +53,18 @@ target_link_libraries(<your executable's name> PUBLIC ImGuiApp)
 
 
 
-![Image of ImGuiApp Demo with undocked windows](figures/fig_2.png)
+<img src="figures/fig_2.png" alt="ImGuiApp Demo Application with undocked windows" style="width:900px;"/>
 
 [ImGuiApp Demo Application with undocked windows](https://github.com/MasterpieceNKA/ImGuiApp_Demo)
 
 
 
-![Image of ImGuiApp Demo](figures/fig_3.png)
+<img src="figures/fig_3.png" alt="ImGuiApp Demo Application 2" style="width:900px;"/>
 
 [ImGuiApp Demo Application 2](https://github.com/MasterpieceNKA/ImGuiApp_Demo)
 
 
-![Image of ImGuiApp sample project structures](figures/fig_4.png)
+<img src="figures/fig_4.png" alt="Image of ImGuiApp sample project structures" style="width:900px;"/>
 
 [Image of ImGuiApp sample project structures](https://github.com/MasterpieceNKA/ImGuiApp_Demo)
 
@@ -75,7 +75,6 @@ target_link_libraries(<your executable's name> PUBLIC ImGuiApp)
 - [GLEW](https://github.com/nigels-com/glew)
 - [GLM](https://github.com/g-truc/glm)
 - [spdlog](https://github.com/gabime/spdlog)
-- [vcpkg](https://github.com/microsoft/vcpkg)
 
 ## Additional
 - ImGuiApp uses the [Roboto](https://fonts.google.com/specimen/Roboto) font ([Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0))
