@@ -19,7 +19,6 @@
 #include <set>
 
 #include "imgui.h"
-#include "imgui_filebrowser.h"
 
 struct GLFWwindow;
 

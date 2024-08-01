@@ -1,6 +1,6 @@
-prefix=C:/Program Files (x86)/urdfViewer
+prefix=C:/Program Files (x86)/ImGuiApp
 exec_prefix=${prefix}
-libdir=C:/Program Files (x86)/urdfViewer/lib
+libdir=C:/Program Files (x86)/ImGuiApp/lib
 includedir=${prefix}/include
 
 Name: glew
