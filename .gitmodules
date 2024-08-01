@@ -4,3 +4,6 @@
 [submodule "vcpkg"]
 	path = vcpkg
 	url = https://github.com/microsoft/vcpkg.git
+[submodule "dependencies/pbPlots/pbPlots"]
+	path = dependencies/pbPlots/pbPlots
+	url = https://github.com/InductiveComputerScience/pbPlots.git

@@ -32,5 +32,8 @@ add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/imgui-1.90.6-docking)
 
 # Include spdlog into build.
 #add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/spdlog-1.14.1)
-add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/spdlog) 
+add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/spdlog)
+
+# Include pbPlots into build. 
+add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/pbPlots)
 
