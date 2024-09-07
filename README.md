@@ -65,8 +65,11 @@ target_link_libraries(<your executable's name> PUBLIC ImGuiApp)
 
 MyCobot 320 Pi Pick and Place example
 <video src="https://github.com/user-attachments/assets/77660176-cd32-4651-85e3-4542b71e9107" width="900px" controls autoplay></video>
+
 \htmlonly
+
 <iframe width="900px" height="507px" src="https://github.com/user-attachments/assets/77660176-cd32-4651-85e3-4542b71e9107" frameborder="0" allowfullscreen></iframe>
+
 \endhtmlonly 
 
 
