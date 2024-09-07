@@ -63,10 +63,17 @@ target_link_libraries(<your executable's name> PUBLIC ImGuiApp)
 
 [ImGuiApp Demo Application 2](https://github.com/MasterpieceNKA/ImGuiApp_Demo)
 
+MyCobot 320 Pi Pick and Place example
+<video src="https://github.com/user-attachments/assets/77660176-cd32-4651-85e3-4542b71e9107" width="900px" controls autoplay></video>
+
+
 
 <img src="figures/fig_4.png" alt="Image of ImGuiApp sample project structures" style="width:900px;"/>
 
 [Image of ImGuiApp sample project structures](https://github.com/MasterpieceNKA/ImGuiApp_Demo)
+
+
+
 
 
 ## 3rd party libaries
